@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Clipboard landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      color: hsl(201, 11%, 66%);
+      font-family: 'Bai Jamjuree', sans-serif;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    body{
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-image: url('images/bg-header-mobile.png');
+      background-repeat: no-repeat;
+      
+    }
+    header,  main .content-1, main .content-2, main .content-4,  main .content-3{
+      margin: auto;
+      width: 80%;
+    }
+    .landing-page{
+      
+      margin-top: 25% ;
+      width: 100%;
+      overflow: hidden;
+    }
+    
+     .item-image img {
+      width: 100%;
+    }
+    h1{
+      font-weight: 600px;
+      font-size: 42px;
+      color: black;
+    }
+    h2{
+      color: black;
+      font-weight: 600;
+    }
+    header p {
+      font-weight: 400;
+      font-size: 18px;
+      color: hsl(201, 11%, 66%);
+    }
+    
+    .btn{
+      
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 10px;
+    }
+    .ios a, .mac a{
+      color: white;
+      display: inline-block;
+      width: 100%;
+      margin: 15px auto;
+    }
+    .ios:active{
+      background-color: hsla(171, 66%, 44%, 0.8);
+    }
+    .ios {
+      background-color: hsl(171, 66%, 44%);
+      width: 100%;
+      border-radius:50px;
+      overflow: hidden;
+      box-shadow: 0px 5px hsl(171, 64%, 41%);
+      /* margin-bottom: 2.5%; */
+    }
+    .mac:active{
+      background-color: hsl(233, 100%, 69%, 0.8);
+    }
+    .mac {
+      width: 100%;
+      background-color: hsl(233, 100%, 69%);
+      border-radius:50px;
+      overflow: hidden;
+      box-shadow: 0px 5px hsl(233, 68%, 61%);
+      /* margin-top: 2.5%; */
+    }
+    .content-1 .item, .content-2 .item,  .content-3 .item{
+      margin-bottom: 5%;
+    }
+    .item-n1 .image img{
+      width: 100%;
+      margin: 5% 0;
+    }
+    .landing-page header{
+     
+      margin-bottom: 45% ;
+    }
+    .content-1{
+     
+      margin-bottom: 45%;
+    }
+    .content-2{
+      
+      margin-bottom: 45%;
+    }
+    .content-3{
+      
+      margin-bottom: 45%;
+      font-size: 18px;
+    }
+    .content-4{
+      
+      margin-bottom: 45%;
+    }
+    .item-n2 p{
+      color: hsl(201, 11%, 66%);
+      margin-top:0%;
+      
+    }
+    .item-n2 h2{
+      
+      margin: 10px 0;
+    }
+
+    .content-2 .item-n3 .image img{
+      width:100%;
+    }
+    footer{
+      width: 100%;
+      background-color: hsla(201, 11%, 66%, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: center;
+      padding:15% 0;
+      margin-top: 50%;
+    }
+    .container .logo-c img{
+      width: 20%;
+    }
+    .container .item{
+      line-height: 60px;
+    }
+    .sosmed{
+      margin-top: 20px;
+      letter-spacing: 40px;
+    }
+  .content-3 .item-acc{
+    max-width: 100%;
+   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 20px;
+    margin: 25% 0;
+  }
+  .content-1  .item-wrap{
+    display: flex;
+    flex-wrap:wrap ;
+  }
+  
+  .item-acc .access{
+    width: 100%;
+    
+  }
+    @media only screen and (min-width: 376px ){
+      body{
+        background-image: url('images/bg-header-desktop.png');
+        background-repeat: no-repeat;
+      }
+      .landing-page{
+        margin-top: 10%;
+        width: 100%;
+      }
+      .mac, .ios{
+        width:30%;
+        justify-content: center;
+      }
+       header,  main .content-1, main .content-2, main .content-4{
+      width:50%;
+    }
+    main{
+      margin-top: 0;
+    }
+    .item-wrap  .item-n1 .image img{
+      transform: translateX(-60%);
+      
+    }
+    .item-n1 .image img{
+      width:200%;
+    }
+
+    .item-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .content-3 .item-wrap .item{
+      width:30%;
+      margin-top: 5%;
+
+    }
+    .item-n2, .item-n1{
+      width: 50%;
+    }
+    .item-n2{
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+      text-align: justify;
+      transform: translateX(20%);
+      
+    }
+    
+      .content-3{
+      margin: 5% auto;
+      width:95%;
+      
+    }
+    
+    .item-acc .access{
+      width: fit-content;
+      
+
+    }
+    .content-3 .item-acc{
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 10%;
+      margin-top: 5%;
+    }
+    footer{
+      margin-top: 25%;
+    }
+    .landing-page header{
+      
+      margin-bottom: 5% ;
+    }
+    main .content-1{
+      
+      margin: 5% auto;
+    }
+    main .content-2{
+      
+      margin: 5% auto;
+    }
+   
+    main .content-4{
+      
+      margin: 5% auto;
+    }
+    footer{
+      padding: 0;
+      margin-top: 20%;
+    }
+    footer .container{
+      width: 100%;
+     
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .container{
+      width: 100%;
+    }
+    .container .item{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    .container .item div{
+      width: 30%;
+      text-align: start;
+    }
+    .sosmed{
+      margin-top: 0px;
+      letter-spacing: 40px;
+    }
+    .container .logo-c img{
+      width: 50%;
+    }
+
+  }
+
+  </style>
+</head>
+<body>
+  <div class="landing-page">
+    <header>
+      <div class="logo-c"><img src="images/logo.svg" alt=""></div>
+      <h1 class="title">A history of everything you copy</h1>
+      <p class="header">
+        Clipboard allows you to track and organize everything you 
+      copy. Instantly access your clipboard on all your devices.
+      </p>
+      <div class="btn">
+        <div class="ios"><a href="#">Download for iOS</a></div> 
+        <div class="mac"><a href="#">Download for Mac</a></div> 
+      </div>
+    </header>
+
+    <main>
+      <div class="content-1">
+        <div class="item">
+          <h2>Keep track of your snippets</h2>
+          <p class="p1">Clipboard instantly stores any item you copy in the cloud, 
+            meaning you can access your snippets immediately on all your 
+            devices. Our Mac and iOS apps will help you organize everything.</p>
+        </div>
+        <div class="item-wrap">
+          <div class="item-n1">
+            <div class="image"><img src="images/image-computer.png" alt=""></div>
+          </div>
+          <div class="item-n2">
+            <div class="item">
+              <h2>Quick Search</h2>
+              <p>Easily search your snippets by content, category, web address, application, and more.</p>
+            </div>
+            <div class="item">
+              <h2>iCloud Sync</h2>
+              <p>Instantly saves and syncs snippets across all your devices.</p>
+            </div>
+            <div class="item">
+              <h2>Complete History</h2>
+              <p>Retrieve any snippets from the first moment you started using the app.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="content-2">
+        <div class="item">
+          <h2>Access Clipboard anywhere</h2>
+          <p>Whether you’re on the go, or at your computer, you can access all your Clipboard 
+            snippets in a few simple clicks.</p>
+        </div>
+        <div class="item-n3">
+          <div class="image">
+            <img src="images/image-devices.png" alt="">
+          </div>
+          
+        </div>
+        
+      </div>
+
+      <div class="content-3">
+        <div class="item">
+          <h2> Supercharge your workflow</h2>
+          <p>We’ve got the tools to boost your productivity.</p>
+        </div>
+        <div class="item-wrap">
+          <div class="item">
+            <img src="images/icon-blacklist.svg" alt="">
+            <h2>Create blacklists</h2>
+            <p> Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+          </div>
+          <div class="item">
+            <img src="images/icon-text.svg" alt="">
+            <h2>Plain text snippets</h2>
+            <p>Remove unwanted formatting from copied text for a consistent look.</p>
+          </div>
+          <div class="item">
+            <img src="images/icon-preview.svg" alt="">
+            <h2>Sneak preview</h2>
+            <p>Quick preview of all snippets on your Clipboard for easy access.</p>
+          </div>
+        </div>
+        <div class="item-acc">
+          <div class="access"><img src="images/logo-google.png" alt=""></div>
+          <div class="access"><img src="images/logo-ibm.png" alt=""></div>
+          <div class="access"><img src="images/logo-microsoft.png" alt=""></div>
+          <div class="access"><img src="images/logo-hp.png" alt=""></div>
+          <div class="access"><img src="images/logo-vector-graphics.png" alt=""></div>
+        </div>
+        
+      </div>
+      <div class="content-4">
+        <div class="item">
+          <h2>Clipboard for iOS and Mac OS</h2>
+          <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+            and you’re ready to start adding to your clipboard.</p>
+            <div class="btn">
+              <div class="ios"><a href="#">Download for iOS</a></div> 
+              <div class="mac"><a href="#">Download for Mac</a></div> 
+            </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="logo-c"><img src="images/logo.svg" alt=""></div>
+        <div class="item">
+          <div> <a href="#">FAQs</a> </div>
+          <div> <a href="#">Contact Us</a></div>
+          <div><a href="#">Privacy Policy</a></div>
+          <div><a href="#">Press Kit</a></div>
+          <div><a href="#">Install Guide</a></div>
+        </div>
+        <div class="sosmed">
+          <img src="images/icon-facebook.svg" alt="">
+          <img src="images/icon-twitter.svg" alt="">
+          <img src="images/icon-instagram.svg" alt="">
+        </div>
+      </div>
+      <div class="atr">
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="#">sierra_za</a>.
+        </p>
+      </div>
+    </footer>
+  </div>
+ 
+</body>
+</html>
